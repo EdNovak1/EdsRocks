@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ed's Painted Rocks | Stone Art & Painting Blog</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            300: '#7cc7fb',
+                            400: '#36a9f7',
+                            500: '#0c8de9',
+                            600: '#006ec7',
+                            700: '#0257a3',
+                            800: '#064985',
+                            900: '#0b3d6f',
+                            950: '#072749',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0b3d6f 0%, #072749 100%);
+        }
+        .hero-overlay {
+            background: radial-gradient(circle at 50% 50%, rgba(12, 141, 233, 0.15) 0%, rgba(7, 39, 73, 0.85) 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-brand-950/95 backdrop-blur-md border-b border-brand-800/50 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-500 to-brand-300 flex items-center justify-center shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform duration-300">
+                        <i data-lucide="palette" class="w-6 h-6 text-brand-950"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-brand-100 to-brand-300">Ed's Painted Rocks</span>
+                        <span class="block text-xs text-brand-300 font-medium tracking-widest uppercase">The Artisan's Journal</span>
+                    </div>
+                </a>
+
+                <!-- Quick Nav -->
+                <nav class="flex items-center space-x-4">
+                    <a href="#blog" class="px-4 py-2 rounded-lg text-sm font-medium text-brand-100 hover:text-white hover:bg-brand-900/60 transition-colors flex items-center gap-2">
+                        <i data-lucide="book-open" class="w-4 h-4"></i>
+                        <span>Blog Posts</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+
+        <!-- Hero Section with Integrated Bio -->
+        <section class="relative gradient-bg text-white overflow-hidden py-16 lg:py-24">
+            <div class="absolute inset-0 hero-overlay pointer-events-none"></div>
+            <div class="absolute top-1/4 -left-20 w-80 h-80 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-10 -right-20 w-96 h-96 bg-brand-400/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    
+                    <!-- Title & Bio Text -->
+                    <div class="lg:col-span-8 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-900/80 border border-brand-700/60 text-brand-300 text-xs font-semibold tracking-wide uppercase">
+                            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-400"></i>
+                            <span>Artisanal Rock Painting & Tutorials</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                            Ed's Painted Rocks <span class="block text-2xl sm:text-3xl lg:text-4xl font-normal text-brand-200 mt-2">Stories, Guides & Crafting Insights</span>
+                        </h1>
+                        <p class="text-base sm:text-lg text-brand-100/90 max-w-3xl font-light leading-relaxed mx-auto lg:mx-0">
+                            Hi! I'm Ed, a rock painting artisan with over a decade of experience transforming smooth river pebbles into layered dot-mandalas, nature scenes, and decorative keepsakes. This blog is where I share my favorite techniques, sealing secrets, tool reviews, and color palette tutorials.
+                        </p>
+                    </div>
+
+                    <!-- Profile Bio Accent Card -->
+                    <div class="lg:col-span-4 flex justify-center">
+                        <div class="w-full max-w-sm bg-brand-900/60 border border-brand-700/60 rounded-2xl p-6 backdrop-blur-md shadow-xl text-center space-y-4">
+                            <img src="https://placehold.co/200x200/0b3d6f/ffffff?text=Ed+the+Artist" 
+                                 alt="Ed the Artist" 
+                                 class="w-24 h-24 rounded-full mx-auto border-2 border-brand-400 object-cover shadow-lg"
+                                 onerror="this.src='https://placehold.co/200x200/0b3d6f/ffffff?text=Ed'">
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Ed's Studio Notes</h3>
+                                <p class="text-xs text-brand-200 mt-1">Sharing knowledge with fellow stone artists & crafters worldwide.</p>
+                            </div>
+                            <div class="pt-2 border-t border-brand-800/80 flex justify-around text-xs text-brand-300">
+                                <div><span class="block font-bold text-white text-base">10+</span> Years Crafter</div>
+                                <div><span class="block font-bold text-white text-base">50+</span> Tutorials</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Filter Controls Bar -->
+        <section id="blog" class="py-8 bg-brand-900 border-b border-brand-800 text-white sticky top-20 z-30 shadow-md">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+                
+                <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+                    <!-- Real-Time Search Bar -->
+                    <div class="relative w-full md:w-96">
+                        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-brand-300">
+                            <i data-lucide="search" class="w-5 h-5"></i>
+                        </div>
+                        <input type="text" id="search-input" placeholder="Search titles, keywords, tools..." 
+                               class="w-full pl-11 pr-10 py-2.5 rounded-xl bg-brand-950/80 border border-brand-700 text-white placeholder-brand-300/70 focus:outline-none focus:ring-2 focus:ring-brand-400 text-sm transition-all">
+                        <button id="clear-search" class="hidden absolute inset-y-0 right-0 pr-3.5 flex items-center text-brand-300 hover:text-white">
+                            <i data-lucide="x" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+
+                    <!-- Category Filters -->
+                    <div class="flex flex-wrap gap-2 w-full md:w-auto justify-start md:justify-end" id="category-filters">
+                        <button class="cat-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-500 text-white shadow-sm transition-all" data-category="all">All Posts</button>
+                        <button class="cat-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-950/60 border border-brand-700/60 text-brand-200 hover:bg-brand-800 hover:text-white transition-all" data-category="Techniques">Techniques</button>
+                        <button class="cat-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-950/60 border border-brand-700/60 text-brand-200 hover:bg-brand-800 hover:text-white transition-all" data-category="Materials">Materials & Stones</button>
+                        <button class="cat-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-950/60 border border-brand-700/60 text-brand-200 hover:bg-brand-800 hover:text-white transition-all" data-category="Weatherproofing">Weatherproofing</button>
+                        <button class="cat-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-950/60 border border-brand-700/60 text-brand-200 hover:bg-brand-800 hover:text-white transition-all" data-category="Reviews">Tool Reviews</button>
+                    </div>
+                </div>
+
+                <!-- Active Filter Indicator -->
+                <div class="flex items-center justify-between text-xs text-brand-300 pt-1">
+                    <span id="results-count">Showing all posts</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Blog Feed Grid -->
+        <section class="py-12 bg-slate-100 min-h-[500px]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Cards populated by JavaScript dynamically -->
+                </div>
+
+                <!-- Empty Search Results State -->
+                <div id="no-results" class="hidden text-center py-20 bg-white rounded-2xl border border-slate-200 shadow-sm max-w-xl mx-auto my-8">
+                    <div class="w-16 h-16 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center mx-auto mb-4">
+                        <i data-lucide="search-x" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-950">No Matching Posts Found</h3>
+                    <p class="text-slate-500 text-sm mt-2">Try adjusting your search query or selecting a different category.</p>
+                    <button id="reset-search-btn" class="mt-6 px-4 py-2 rounded-lg bg-brand-600 text-white text-xs font-semibold hover:bg-brand-500 transition-colors">Reset Search Filters</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Blog Modal Window -->
+    <div id="post-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-brand-950/80 backdrop-blur-sm p-4 sm:p-6 lg:p-8 flex items-center justify-center">
+        <div class="relative w-full max-w-3xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200 my-8">
+            
+            <!-- Modal Header Controls -->
+            <button id="modal-close" class="absolute top-4 right-4 z-10 p-2 rounded-full bg-brand-950/70 text-white hover:bg-brand-900 transition-colors" aria-label="Close article">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Modal Content -->
+            <div id="modal-content" class="max-h-[85vh] overflow-y-auto">
+                <!-- Dynamically injected article content -->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-950 text-brand-200 border-t border-brand-900 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-500 text-brand-950 flex items-center justify-center font-bold">
+                    <i data-lucide="palette" class="w-5 h-5"></i>
+                </div>
+                <span class="text-lg font-bold text-white tracking-tight">Ed's Painted Rocks</span>
+            </div>
+            <p class="text-xs text-brand-400 max-w-md mx-auto">
+                Dedicated to stone painting craftsmanship, tutorials, and creative techniques.
+            </p>
+            <p class="text-xs text-brand-500 pt-2">
+                &copy; <span id="year"></span> Ed's Painted Rocks. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts & Blog Posts Database -->
+    <script>
+        // Database of Blog Articles (No prices or e-commerce)
+        const blogPosts = [
+            {
+                id: 1,
+                title: "Exploring Precision Dot Mandala Techniques",
+                category: "Techniques",
+                date: "October 18, 2026",
+                readTime: "5 min read",
+                image: "https://placehold.co/600x400/0b3d6f/ffffff?text=Dot+Mandala+Technique",
+                snippet: "Learn how to calculate grid symmetry and choose stylus sizes for sharp, layered mandala dots that don't bleed.",
+                content: `
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">Mandala painting on natural river stone requires patience, preparation, and symmetry. One common mistake beginner artists make is rushing straight to applying paint without marking reference guides.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">1. Basecoat Prep</h4>
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">Always start with a smooth dark base coat. I recommend applying two coats of matte navy acrylic paint. This creates deep contrast that makes cyan, cobalt, and white dots pop vibrant aesthetic.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">2. Stylus & Dotting Tools</h4>
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">Instead of traditional paintbrushes, use double-ended acrylic ball styluses. Dip perpendicularly into your acrylic mixture—never scoop. Ensure your paint consistency matches warm honey.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">3. Building Layers</h4>
+                    <p class="text-slate-700 leading-relaxed text-base">Allow the primary dots to dry completely before applying top dots (smaller contrasting dots placed directly on top of dry larger dots). This creates a stunning 3D texture effect.</p>
+                `
+            },
+            {
+                id: 2,
+                title: "Sourcing Natural River Stones Responsibly",
+                category: "Materials",
+                date: "October 10, 2026",
+                readTime: "4 min read",
+                image: "https://placehold.co/600x400/072749/ffffff?text=River+Stone+Sourcing",
+                snippet: "Where to find the smoothest basalt and granite pebbles while respecting local nature guidelines.",
+                content: `
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">The quality of your canvas dictates the longevity of your painted artwork. Smooth river stones smoothed naturally by water flow make ideal surfaces.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">Finding Ideal Shapes</h4>
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">Look for flat, oval-shaped stones composed of dark basalt or tight-grain granite. Avoid porous sandstone as it absorbs paint unevenly.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">Environmental Responsibilities</h4>
+                    <p class="text-slate-700 leading-relaxed text-base">Never harvest stones from protected state parks, wildlife refuges, or private property without explicit permission. Alternatively, landscape supply centers sell bulk smooth river pebbles ethically and affordably.</p>
+                `
+            },
+            {
+                id: 3,
+                title: "The Art of Weatherproofing Outdoor Rocks",
+                category: "Weatherproofing",
+                date: "September 28, 2026",
+                readTime: "6 min read",
+                image: "https://placehold.co/600x400/006ec7/ffffff?text=Weatherproofing+Guide",
+                snippet: "Protecting your rock art against UV fading, rain, and winter frost with professional gloss coats.",
+                content: `
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">If you plan to place your painted rocks in garden paths or outdoor spaces, proper sealing is non-negotiable to prevent peeling and fading.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">UV-Resistant Clear Coats</h4>
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">Use non-yellowing acrylic spray sealants with UV inhibitors. Apply two thin coats in a well-ventilated space, allowing 30 minutes between sprays.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">Resin Finish for Ultra Shine</h4>
+                    <p class="text-slate-700 leading-relaxed text-base">For indoor or high-end display pieces, a top coat of epoxy resin provides a glass-like finish that accentuates deep dark blue pigment layers.</p>
+                `
+            },
+            {
+                id: 4,
+                title: "Color Palette Secrets: Blue & Dark Tone Harmonies",
+                category: "Techniques",
+                date: "September 15, 2026",
+                readTime: "5 min read",
+                image: "https://placehold.co/600x450/064985/ffffff?text=Blue+Color+Harmonies",
+                snippet: "How to blend navy, ultramarine, cyan, and metallic highlights for moody ocean and night sky themes.",
+                content: `
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">Blues evoke tranquility, depth, and elegance. Mixing multiple shades of blue creates dynamic dimension in stone paintings.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">Monochromatic Gradients</h4>
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">Start from a deep midnight blue core and transition outward through navy, cobalt, cyan, and soft powder blue dots.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">Metallic Accents</h4>
+                    <p class="text-slate-700 leading-relaxed text-base">Incorporate metallic silver or light pearl dots between deep blue layers. The metallic paint catches natural light in garden displays.</p>
+                `
+            },
+            {
+                id: 5,
+                title: "Top Acrylic Markers & Fine Liners Review",
+                category: "Reviews",
+                date: "August 30, 2026",
+                readTime: "7 min read",
+                image: "https://placehold.co/600x450/0257a3/ffffff?text=Acrylic+Markers+Review",
+                snippet: "A comprehensive hands-on test of nib sizes, opaque coverage, and paint flow on stone surfaces.",
+                content: `
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">Paint pens are indispensable tools for detailed rock outlines, lettering, and fine line work.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">Extra Fine 0.7mm Nib Test</h4>
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">When sketching fine owl feathers or delicate wave lines, ultra-fine nibs offer the control of a ballpoint pen with opaque acrylic ink.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">Flow & Clogging Resistance</h4>
+                    <p class="text-slate-700 leading-relaxed text-base">Water-based acrylic markers perform best on pre-sealed or base-coated rocks. Unsealed raw stone can fray delicate felt tips over time.</p>
+                `
+            },
+            {
+                id: 6,
+                title: "Preparing Rocks: Cleaning & Priming Best Practices",
+                category: "Materials",
+                date: "August 12, 2026",
+                readTime: "4 min read",
+                image: "https://placehold.co/600x450/0c8de9/ffffff?text=Rock+Cleaning+%26+Prep",
+                snippet: "Step-by-step cleaning routines using warm water, mild soap, and gesso priming.",
+                content: `
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">Before dipping your brush into paint, proper surface hygiene ensures adhesion that lasts for decades.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">Scrubbing & Degreasing</h4>
+                    <p class="text-slate-700 leading-relaxed text-base mb-4">Soak harvested stones in warm soapy water for 20 minutes, scrubbing away grit with a stiff-bristle brush. Let dry completely in sun light.</p>
+                    <h4 class="text-lg font-bold text-brand-950 mb-2">Gesso Priming</h4>
+                    <p class="text-slate-700 leading-relaxed text-base">Applying a coat of clear or black acrylic gesso fills microscopic pores in the stone, creating a smooth canvas for intricate artwork.</p>
+                `
+            }
+        ];
+
+        // State variables
+        let activeCategory = 'all';
+        let searchQuery = '';
+
+        // DOM Elements
+        const blogGrid = document.getElementById('blog-grid');
+        const searchInput = document.getElementById('search-input');
+        const clearSearchBtn = document.getElementById('clear-search');
+        const categoryBtns = document.querySelectorAll('.cat-btn');
+        const resultsCount = document.getElementById('results-count');
+        const noResults = document.getElementById('no-results');
+        const resetSearchBtn = document.getElementById('reset-search-btn');
+        const modal = document.getElementById('post-modal');
+        const modalContent = document.getElementById('modal-content');
+        const modalClose = document.getElementById('modal-close');
+
+        // Init Lucide
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Render Cards Function
+        function renderPosts() {
+            const filtered = blogPosts.filter(post => {
+                const matchesCategory = activeCategory === 'all' || post.category === activeCategory;
+                const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                      post.snippet.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                      post.category.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesCategory && matchesSearch;
+            });
+
+            blogGrid.innerHTML = '';
+
+            if (filtered.length === 0) {
+                noResults.classList.remove('hidden');
+                resultsCount.textContent = 'No matching blog posts found';
+            } else {
+                noResults.classList.add('hidden');
+                resultsCount.textContent = `Showing ${filtered.length} of ${blogPosts.length} posts`;
+
+                filtered.forEach(post => {
+                    const card = document.createElement('article');
+                    card.className = 'bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-200/80 flex flex-col group';
+                    card.innerHTML = `
+                        <div class="relative overflow-hidden aspect-16/9 bg-slate-200 cursor-pointer" onclick="openModal(${post.id})">
+                            <img src="${post.image}" 
+                                 alt="${post.title}" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/600x400/0b3d6f/ffffff?text=Blog+Article'">
+                            <span class="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-semibold bg-brand-950/80 text-brand-200 backdrop-blur-sm">${post.category}</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center gap-3 text-xs text-slate-400 mb-2 font-medium">
+                                    <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5 text-brand-600"></i> ${post.date}</span>
+                                    <span>•</span>
+                                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5 text-brand-600"></i> ${post.readTime}</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-brand-950 group-hover:text-brand-600 transition-colors cursor-pointer" onclick="openModal(${post.id})">
+                                    ${post.title}
+                                </h3>
+                                <p class="mt-3 text-slate-600 text-sm leading-relaxed">${post.snippet}</p>
+                            </div>
+                            <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center">
+                                <button onclick="openModal(${post.id})" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1 transition-colors">
+                                    <span>Read Full Guide</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    blogGrid.appendChild(card);
+                });
+                lucide.createIcons();
+            }
+        }
+
+        // Open Modal Function
+        window.openModal = function(id) {
+            const post = blogPosts.find(p => p.id === id);
+            if (!post) return;
+
+            modalContent.innerHTML = `
+                <div class="relative aspect-21/9 bg-slate-900">
+                    <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-6 right-6 text-white">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-500 text-white">${post.category}</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold mt-2 leading-tight">${post.title}</h2>
+                    </div>
+                </div>
+                <div class="p-6 sm:p-8 space-y-6">
+                    <div class="flex items-center justify-between text-xs text-slate-500 pb-4 border-b border-slate-100">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-brand-950">Written by Ed</span>
+                            <span>•</span>
+                            <span>${post.date}</span>
+                        </div>
+                        <span class="font-semibold text-brand-600">${post.readTime}</span>
+                    </div>
+
+                    <div class="article-body">
+                        ${post.content}
+                    </div>
+
+                    <!-- Placeholder Comments Section -->
+                    <div class="pt-8 border-t border-slate-200">
+                        <h4 class="text-lg font-bold text-brand-950 mb-4 flex items-center gap-2">
+                            <i data-lucide="message-square" class="w-5 h-5 text-brand-600"></i>
+                            <span>Crafters' Comments</span>
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                                <div class="flex justify-between items-center text-xs font-semibold text-slate-700 mb-1">
+                                    <span>Sarah M.</span>
+                                    <span class="text-slate-400 font-normal">2 days ago</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed">This guide helped so much with my navy mandala symmetry! Thanks Ed.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                                <div class="flex justify-between items-center text-xs font-semibold text-slate-700 mb-1">
+                                    <span>Mark T.</span>
+                                    <span class="text-slate-400 font-normal">1 week ago</span>
+                                </div>
+                                <p class="text-xs text-slate-600 leading-relaxed">Great tip regarding the UV resistant sealant spray. My outdoor rocks haven't faded at all.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+        };
+
+        // Close Modal Handler
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+
+        // Search Bar Event Listeners
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.trim();
+            if (searchQuery.length > 0) {
+                clearSearchBtn.classList.remove('hidden');
+            } else {
+                clearSearchBtn.classList.add('hidden');
+            }
+            renderPosts();
+        });
+
+        clearSearchBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            searchQuery = '';
+            clearSearchBtn.classList.add('hidden');
+            renderPosts();
+        });
+
+        // Category Filter Buttons Event Listener
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-brand-500', 'text-white');
+                    b.classList.add('bg-brand-950/60', 'text-brand-200');
+                });
+                btn.classList.add('active', 'bg-brand-500', 'text-white');
+                btn.classList.remove('bg-brand-950/60', 'text-brand-200');
+
+                activeCategory = btn.getAttribute('data-category');
+                renderPosts();
+            });
+        });
+
+        resetSearchBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            searchQuery = '';
+            activeCategory = 'all';
+            clearSearchBtn.classList.add('hidden');
+            categoryBtns.forEach((b, idx) => {
+                if (idx === 0) {
+                    b.classList.add('active', 'bg-brand-500', 'text-white');
+                    b.classList.remove('bg-brand-950/60', 'text-brand-200');
+                } else {
+                    b.classList.remove('active', 'bg-brand-500', 'text-white');
+                    b.classList.add('bg-brand-950/60', 'text-brand-200');
+                }
+            });
+            renderPosts();
+        });
+
+        // Initial Load
+        renderPosts();
+    </script>
+</body>
+</html>
